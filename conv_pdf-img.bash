@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # define usage function
+# Help function
 usage()
 {
 	echo "usage: komut [-f file ] | [-c num] | [-d num] | [-q num] | [-x] | [-h]]"
