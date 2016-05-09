@@ -100,6 +100,10 @@ for row in reader:
         message = "Files were processed in the folder: " + DIR + '\n'
         dir_log.write(message)
         
+        # Removing ".pdf" extensions from file names that written in fixed.csv file
+        if '.pdf' in row[filename]:
+            row[filename]=os.path.splitext(PDF)[0]
+            
         # Creating a new csv file with the corresponding csv
         # record+folder.
         headerLine = '\t'.join(map(str, row))
